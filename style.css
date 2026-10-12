@@ -1,0 +1,993 @@
+/* =========================================================
+   TANVIR MRIDHA - MODERN ATS-FRIENDLY CV
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE SETTINGS
+   ========================================================= */
+
+@page {
+    size: A4;
+    margin: 0.45in;
+}
+
+
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --primary: #163a5f;
+    --primary-dark: #0f2d49;
+
+    --text: #20252b;
+    --text-light: #3d464f;
+    --muted: #5f6b76;
+
+    --line: #d7dde3;
+    --line-light: #edf0f2;
+
+    --light-bg: #f4f7fa;
+
+    --white: #ffffff;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #eef1f4;
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10pt;
+    line-height: 1.45;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   CV CONTAINER
+   ========================================================= */
+
+.cv {
+    width: 100%;
+    max-width: 820px;
+
+    margin: 28px auto;
+    padding: 38px 44px;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   HEADER WITH PROFILE PHOTO
+   ========================================================= */
+
+.header-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.header-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-photo {
+    flex: 0 0 auto;
+
+    width: 100px;
+    height: 125px;
+
+    overflow: hidden;
+
+    border: 1px solid #d7dde3;
+
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* NAME */
+
+.name {
+    margin: 0;
+
+    color: var(--primary-dark);
+
+    font-size: 30pt;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+
+    text-transform: uppercase;
+}
+
+
+/* PROFESSIONAL TITLE */
+
+.job-title {
+    margin: 8px 0 12px;
+
+    color: var(--muted);
+
+    font-size: 11pt;
+    line-height: 1.35;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.contact {
+    margin: 0;
+
+    color: #39434d;
+
+    font-size: 8.9pt;
+    line-height: 1.7;
+}
+
+.contact-row {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.contact-row + .contact-row {
+    margin-top: 2px;
+}
+
+.contact .separator {
+    color: #a4adb5;
+
+    font-weight: 400;
+}
+
+.contact a {
+    color: #39434d;
+
+    text-decoration: none;
+
+    transition:
+        color 0.15s ease,
+        text-decoration 0.15s ease;
+}
+
+.contact a:hover {
+    color: var(--primary);
+}
+
+.contact .links a {
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+.contact .links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+    margin-top: 18px;
+}
+
+
+/* SECTION TITLE */
+
+.section-title {
+    position: relative;
+
+    margin: 0 0 9px;
+
+    padding: 0 0 6px;
+
+    color: var(--primary-dark);
+
+    border-bottom: 1px solid var(--line);
+
+    font-size: 10.8pt;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ACCENT LINE */
+
+.section-title::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 52px;
+    height: 2px;
+
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   PROFESSIONAL SUMMARY
+   ========================================================= */
+
+.summary {
+    margin: 0;
+
+    color: #303840;
+
+    font-size: 9.7pt;
+
+    line-height: 1.55;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   TECHNICAL SKILLS
+   ========================================================= */
+
+.skills {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 28px;
+    row-gap: 5px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.skills li {
+    position: relative;
+
+    margin: 0;
+
+    padding-left: 13px;
+
+    color: #343c44;
+
+    font-size: 9.3pt;
+
+    line-height: 1.4;
+}
+
+
+/* BULLET */
+
+.skills li::before {
+    content: "•";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+/* SKILL CATEGORY */
+
+.skill-label {
+    color: #1c252d;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EXPERIENCE & PROJECT ENTRIES
+   ========================================================= */
+
+.entry {
+    position: relative;
+
+    margin-bottom: 13px;
+
+    padding-left: 13px;
+
+    border-left: 2px solid #dce3e9;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ENTRY HEADING */
+
+.entry-header {
+    margin: 0;
+
+    color: #1d2730;
+
+    font-size: 9.8pt;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+}
+
+
+/* ORGANIZATION */
+
+.organization {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+/* DATE */
+
+.date {
+    color: var(--muted);
+
+    font-weight: 600;
+}
+
+
+/* PROJECT TECHNOLOGIES */
+
+.entry-meta {
+    color: var(--muted);
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   EXPERIENCE / PROJECT BULLETS
+   ========================================================= */
+
+.details {
+    margin: 4px 0 0 16px;
+
+    padding: 0;
+}
+
+.details li {
+    margin-bottom: 3px;
+
+    padding-left: 2px;
+
+    color: var(--text-light);
+
+    font-size: 9.1pt;
+
+    line-height: 1.4;
+}
+
+.details li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-item {
+    margin-bottom: 11px;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid var(--line-light);
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+
+/* DEGREE */
+
+.degree {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+/* EDUCATION DETAILS */
+
+.education-item p {
+    margin: 3px 0 0;
+
+    color: #4a535c;
+
+    font-size: 9.2pt;
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+   ========================================================= */
+
+.publication-title {
+    margin: 0 0 4px;
+
+    color: #1d2730;
+
+    font-size: 9.8pt;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+}
+
+.publication-info {
+    margin: 0 0 4px;
+
+    color: var(--muted);
+
+    font-size: 9pt;
+}
+
+.publication-info + .details {
+    margin-top: 5px;
+}
+
+
+/* DOI */
+
+.publication-doi {
+    margin: 7px 0 0;
+
+    color: #4a535c;
+
+    font-size: 8.9pt;
+}
+
+.publication-doi a {
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.publication-doi a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CORE STRENGTHS
+   ========================================================= */
+
+.strengths {
+    margin: 0;
+
+    padding: 10px 13px;
+
+    background: var(--light-bg);
+
+    border-left: 3px solid var(--primary);
+
+    color: #35404a;
+
+    font-size: 9.2pt;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   GENERAL LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   PRINT / PDF
+   ========================================================= */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0.45in;
+    }
+
+    body {
+        background: #ffffff;
+
+        color: var(--text);
+
+        font-size: 9.7pt;
+    }
+
+    .cv {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+        padding: 0;
+
+        background: #ffffff;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        margin-bottom: 17px;
+
+        padding-bottom: 13px;
+
+        border-bottom-width: 2px;
+    }
+
+    .name {
+        font-size: 27pt;
+    }
+
+    .job-title {
+        margin: 6px 0 9px;
+
+        font-size: 10.5pt;
+    }
+
+    .contact {
+        font-size: 8.5pt;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        margin-top: 13px;
+    }
+
+    .section-title {
+        margin-bottom: 7px;
+
+        padding-bottom: 5px;
+
+        font-size: 10.2pt;
+    }
+
+
+    /* SUMMARY */
+
+    .summary {
+        font-size: 9.2pt;
+
+        line-height: 1.45;
+    }
+
+
+    /* SKILLS */
+
+    .skills {
+        column-gap: 22px;
+
+        row-gap: 3px;
+    }
+
+    .skills li {
+        font-size: 8.8pt;
+    }
+
+
+    /* ENTRIES */
+
+    .entry {
+        margin-bottom: 9px;
+
+        padding-left: 10px;
+    }
+
+    .entry-header {
+        font-size: 9.3pt;
+    }
+
+    .details {
+        margin-top: 2px;
+    }
+
+    .details li {
+        margin-bottom: 1px;
+
+        font-size: 8.7pt;
+
+        line-height: 1.32;
+    }
+
+
+    /* EDUCATION */
+
+    .education-item {
+        margin-bottom: 7px;
+
+        padding-bottom: 6px;
+    }
+
+    .education-item p {
+        font-size: 8.8pt;
+    }
+
+
+    /* PUBLICATION */
+
+    .publication-title {
+        font-size: 9.3pt;
+    }
+
+    .publication-info {
+        font-size: 8.7pt;
+    }
+
+    .publication-doi {
+        font-size: 8.6pt;
+    }
+
+
+    /* STRENGTHS */
+
+    .strengths {
+        padding: 7px 10px;
+
+        font-size: 8.8pt;
+    }
+
+
+    /* LINKS */
+
+    a {
+        color: inherit;
+
+        text-decoration: none;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    body {
+        background: #ffffff;
+    }
+
+    .cv {
+        width: 100%;
+
+        margin: 0;
+
+        padding: 28px 22px;
+
+        max-width: 100%;
+    }
+
+
+    .name {
+        font-size: 25pt;
+    }
+
+
+    .job-title {
+        font-size: 10pt;
+    }
+
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section {
+        margin-top: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    .cv {
+        padding: 24px 18px;
+    }
+
+
+    .name {
+        font-size: 23pt;
+
+        letter-spacing: -0.3px;
+    }
+
+
+    .job-title {
+        font-size: 9.5pt;
+    }
+
+
+    .contact {
+        font-size: 8.3pt;
+    }
+
+
+    .contact-row {
+        gap: 5px;
+    }
+
+
+    .section-title {
+        font-size: 10pt;
+    }
+
+
+    .summary {
+        font-size: 9.2pt;
+    }
+
+
+    .entry {
+        padding-left: 9px;
+    }
+
+
+    .entry-header {
+        font-size: 9.2pt;
+    }
+
+
+    .details li {
+        font-size: 8.8pt;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .cv {
+        padding: 20px 15px;
+    }
+
+
+    .name {
+        font-size: 21pt;
+    }
+
+
+    .job-title {
+        font-size: 9.2pt;
+    }
+
+
+    .contact {
+        font-size: 8pt;
+    }
+
+
+    .contact-row {
+        gap: 4px;
+    }
+
+
+    .skills li {
+        font-size: 8.8pt;
+    }
+}
+
+
+/* =========================================================
+   PAGE BREAK CONTROL
+   ========================================================= */
+
+@media print {
+
+    .section,
+    .entry,
+    .education-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+}
+/* =========================================================
+   REFERENCES
+   ========================================================= */
+
+.references {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    margin-top: 2px;
+}
+
+.reference {
+    padding-left: 13px;
+
+    border-left: 2px solid #dce3e9;
+}
+
+.reference-name {
+    margin: 0 0 4px;
+
+    color: var(--primary);
+
+    font-size: 9.7pt;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+.reference-details {
+    margin: 0;
+
+    color: #4a535c;
+
+    font-size: 8.9pt;
+
+    line-height: 1.5;
+}
+
+.reference-details a {
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+.reference-details a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    .references {
+        gap: 24px;
+    }
+
+    .reference-name {
+        font-size: 9.2pt;
+    }
+
+    .reference-details {
+        font-size: 8.5pt;
+    }
+
+    .reference-details a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .references {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+}
+.github-link {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    color: #0000EE;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: underline;
+
+    white-space: nowrap;
+}
+
+.github-link:hover {
+    color: #551A8B;
+}
+.entry {
+    position: relative;
+
+    margin-bottom: 13px;
+    padding-left: 13px;
+    padding-bottom: 13px;
+
+    border-left: 2px solid #dce3e9;
+    border-bottom: 1px solid #d7dde3;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
